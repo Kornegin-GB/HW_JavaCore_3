@@ -1,6 +1,6 @@
 package ru.geekbrains.workers;
 
-public abstract class Worker {
+public abstract class Worker implements Comparable<Worker> {
     protected String name; // Имя работника
     protected String surname; // Фамилия работника
     protected String post; // Должность работника
@@ -13,8 +13,13 @@ public abstract class Worker {
         return name + " " + surname + " заработал " + averageMonthlySalary();
     }
 
-    public int getSalary() {
-        return salary;
+    @Override
+    public int compareTo(Worker work) {
+        if (this.salary == work.salary) {
+            return this.name.compareTo(work.name);
+        } else {
+            return this.salary - work.salary;
+        }
     }
 
 }

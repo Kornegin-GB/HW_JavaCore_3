@@ -13,5 +13,4 @@ public class HourlyPayment extends Worker {
     public int averageMonthlySalary() {
         return (int) 20.8 * 8 * salary;
     }
-
 }
