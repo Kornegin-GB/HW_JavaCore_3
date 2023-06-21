@@ -9,6 +9,7 @@ import ru.geekbrains.workers.Worker;
 
 public class Program {
     public static void main(String[] args) {
+
         // Реализация из класса Worker
         Worker[] workers = {
                 new HourlyPayment("Пётр", "Петров", "Фронтендер", 500),
